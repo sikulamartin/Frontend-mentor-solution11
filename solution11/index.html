@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="div1">
+      <div class="wrapper">
+        <div class="wrapperTop">
+          <div class="wrapperTopContainer">
+            <img src="images/image-jeremy.png" width="78px" class="imgProfile">
+            <div class="UserInfoContainer">
+              <div class="report">
+                Report for
+              </div>
+              <div class="name">
+                Jeremy Robson
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapperBottomMain">
+          <div class="timeStats">
+            <div class="daily" onclick="updateData('daily')" id="dailyStats">Daily</div>
+            <div class="weekly" onclick="updateData('weekly')" id="weeklyStats">Weekly</div>
+            <div class="monthly" onclick="updateData('monthly')" id="monthlyStats">Monthly</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="div2">
+      <div class="wrapper wrapperCard">
+        <div class="WrapperCardBottom">
+          <div class="typeContainer">
+            Work
+            <div class="setting">
+            </div>
+            <img src="images/icon-ellipsis.svg" width="16px" height="5px" style="margin: auto 0;">
+          </div>
+          <div class="stats">
+            <div class="current">
+              <span id="work-current"></span>hrs
+            </div>
+            <div class="previous">
+              Last Week - <span id="work-previous"></span>hrs
+            </div>
+          </div>
+        </div>
+        <div class="wrapperBottom">
+          <div class="wrapperImage">
+            <img src="images/icon-work.svg" width="78px">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="div3">
+      <div class="wrapper wrapperCard" style="background-color: #55C2E6;">
+        <div class="WrapperCardBottom">
+          <div class="typeContainer">
+            Play
+            <div class="setting">
+            </div>
+            <img src="images/icon-ellipsis.svg" width="16px" height="5px" style="margin: auto 0;">
+          </div>
+          <div class="stats">
+            <div class="current">
+              <span id="play-current"></span>hrs
+            </div>
+            <div class="previous">
+              Last Week - <span id="play-previous"></span>hrs
+            </div>
+          </div>
+        </div>
+        <div class="wrapperBottom">
+          <div class="wrapperImage">
+            <img src="images/icon-play.svg" width="78px">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="div4">
+      <div class="wrapper wrapperCard" style="background-color: #FF5E7D;">
+        <div class="WrapperCardBottom">
+          <div class="typeContainer">
+            Study
+            <div class="setting">
+            </div>
+            <img src="images/icon-ellipsis.svg" width="16px" height="5px" style="margin: auto 0;">
+          </div>
+          <div class="stats">
+            <div class="current">
+              <span id="study-current"></span>hrs
+            </div>
+            <div class="previous">
+              Last Week - <span id="study-previous"></span>hrs
+            </div>
+          </div>
+        </div>
+        <div class="wrapperBottom">
+          <div class="wrapperImage">
+            <img src="images/icon-study.svg" width="78px">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="div5">
+      <div class="wrapper wrapperCard" style="background-color: #4BCF82;">
+        <div class="WrapperCardBottom">
+          <div class="typeContainer">
+            Exercise
+            <div class="setting">
+            </div>
+            <img src="images/icon-ellipsis.svg" width="16px" height="5px" style="margin: auto 0;">
+          </div>
+          <div class="stats">
+            <div class="current">
+              <span id="exercise-current"></span>hrs
+            </div>
+            <div class="previous">
+              Last Week - <span id="exercise-previous"></span>hrs
+            </div>
+          </div>
+        </div>
+        <div class="wrapperBottom">
+          <div class="wrapperImage" style="top: 0px;">
+            <img src="images/icon-exercise.svg" width="78px">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="div6">
+      <div class="wrapper wrapperCard" style="background-color: #7335D2;">
+        <div class="WrapperCardBottom">
+          <div class="typeContainer">
+            Social
+            <div class="setting">
+            </div>
+            <img src="images/icon-ellipsis.svg" width="16px" height="5px" style="margin: auto 0;">
+          </div>
+          <div class="stats">
+            <div class="current">
+              <span id="social-current"></span>hrs
+            </div>
+            <div class="previous">
+              Last Week - <span id="social-previous"></span>hrs
+            </div>
+          </div>
+        </div>
+        <div class="wrapperBottom">
+          <div class="wrapperImage">
+            <img src="images/icon-social.svg" width="78px">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="div7">
+      <div class="wrapper wrapperCard" style="background-color: #F1C75B;">
+        <div class="WrapperCardBottom">
+          <div class="typeContainer">
+            Self Care
+            <div class="setting">
+            </div>
+            <img src="images/icon-ellipsis.svg" width="16px" height="5px" style="margin: auto 0;">
+          </div>
+          <div class="stats">
+            <div class="current">
+              <span id="self-care-current"></span>hrs
+            </div>
+            <div class="previous">
+              Last Week - <span id="self-care-previous"></span>hrs
+            </div>
+          </div>
+        </div>
+        <div class="wrapperBottom">
+          <div class="wrapperImage">
+            <img src="images/icon-self-care.svg" width="78px">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
